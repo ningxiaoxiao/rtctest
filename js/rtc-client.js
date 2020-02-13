@@ -39,7 +39,10 @@ class RtcClient {
 
     try {
       // join the room
-      await this.client_.join({ roomId: this.roomId_ });
+      if(justlook)
+        await this.client_.join({roomId:this.roomId_,role:'audience'})
+      else
+        await this.client_.join({ roomId: this.roomId_ });
       console.log('join room success');
       Toast.notify('进房成功！');
       this.isJoined_ = true;
