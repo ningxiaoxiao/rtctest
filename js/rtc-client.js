@@ -20,7 +20,7 @@ class RtcClient {
     });
   }
 
-  async join() {
+  async join(justlook) {
     if (this.isJoined_) {
       console.warn('duplicate RtcClient.join() observed');
       return;
@@ -56,7 +56,7 @@ class RtcClient {
       Toast.error('进房错误！');
       return;
     }
-
+    if(justlook)return
     try {
       // 采集摄像头和麦克风视频流
       await this.createLocalStream({ audio: true, video: true });
