@@ -5,7 +5,7 @@ function addView(id) {
     $('<div/>', {
       id,
       class: 'video-view'
-    }).appendTo('body');
+    }).appendTo('#video_grid');
   }
 }
 
