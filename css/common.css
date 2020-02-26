@@ -52,11 +52,8 @@ h5 {
   margin-bottom: 10px; }
   
 .video-grid {
-  margin-left: 25px;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: auto; }
+
+}
 
 .card {
   width: 398px; }
@@ -76,7 +73,11 @@ h5 {
 #local_video_info {
   position: absolute; }
 
-.video-view,
+.video-view {
+  width: 100%;
+  height: 100%;
+}
+
 #local_stream, #local_video_info {
-  width: 320px;
+  width: 430px;
   height: 240px; }

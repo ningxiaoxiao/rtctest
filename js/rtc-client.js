@@ -79,6 +79,7 @@ class RtcClient {
         return;
       }
     }
+   
 
     this.localStream_.on('player-state-changed', event => {
       console.log(`local stream ${event.type} player is ${event.state}`);
@@ -186,7 +187,7 @@ class RtcClient {
       // microphoneId: getMicrophoneId()
     });
     // 设置视频分辨率帧率和码率
-    this.localStream_.setVideoProfile('480p');
+    this.localStream_.setVideoProfile('240p');
 
     await this.localStream_.initialize();
   }
